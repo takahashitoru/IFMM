@@ -47,7 +47,7 @@ As you will notice, some parameters have to be specified for the method:
 * epsilon_rel_fillin: relative accuracy for compressing the fill-ins that arise during the elimination. You can play with this value - I suggest something between 10^{-1} and 10^{-3}.
 * epsilon_rel_basis: relative accuracy for updating the basis of the FMM operators. 10^{-3} seems to be a good choice.
 * LR_mode: choose LR_mode=3 for best performance (this uses a randomized singular value decomposition for obtaining low rank approximations).
-    Delay_update: currently not supported yet, so put false (I still have some work to do...)
+    Delay_update: currently not supported yet, so put false.
 
 ---
 
