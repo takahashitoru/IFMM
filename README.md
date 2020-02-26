@@ -29,10 +29,9 @@ Please have a look at file main.cpp, which is an example of how to use the metho
 We assume to use g++, but the Intel's C++ compiler also can work.
 
 * Specify the directory of the Eigen by EIGEN_INCLUDE.
-* Eigen works better with MKL. To do so, add EIGEN_USE_MKL_ALL to FLAGS.
-* Use the OMP library by -fopenmp.
-* To parallelize the code, add "PARA_CHECK_RANK" and "IFMM_PARALLELIZE" to FLAGS.
-* To parallelize the code, add "PARA_CHECK_RANK" and "IFMM_PARALLELIZE" to FLAGS.
+* Eigen works better with MKL. To do so, add EIGEN_USE_MKL_ALL to FLAGS and specify the path to the library and include files.
+* Use the OpenMP library by -fopenmp.
+* To parallelize the code, add both PARA_CHECK_RANK and IFMM_PARALLELIZE to FLAGS.
 
 ---
 
