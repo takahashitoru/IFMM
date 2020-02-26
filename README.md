@@ -2,13 +2,13 @@
 
 ** Overview **
 
-The code provides an (approximate) direct solver for the system of equations Ax=b, where the matrix entries a_{ij} are based on a kernel K(r), i.e. a_{ij} = K(||x_i - x_j||). The algorithm has a linear scaling O(N) and is based on two key ideas: (1) the original dense matrix A is transformed into an extended sparse matrix, and (2) fill-ins arising during the elimination phase are compressed as low-rank matrices if they correspond to well-separated interactions (hence ensuring that the sparsity pattern of the extended matrix is preserved). The method can be used as a highly accurate direct solver (machine accuracy can be achieved if needed), but it is more efficient to use it as a low accuracy preconditioner in an iterative solver such as GMRES.
+The code provides an (approximate) direct solver for the system of equations $Ax=b$, where the matrix entries $a_{ij}$ are based on a kernel $K(r)$, i.e., $a_{ij} = K(||x_i - x_j||)$. The algorithm has a linear scaling $O(N)$ and is based on two key ideas: (1) the original dense matrix A is transformed into an extended sparse matrix, and (2) fill-ins arising during the elimination phase are compressed as low-rank matrices if they correspond to well-separated interactions (hence ensuring that the sparsity pattern of the extended matrix is preserved). The method can be used as a highly accurate direct solver (machine accuracy can be achieved if needed), but it is more efficient to use it as a low accuracy preconditioner in an iterative solver such as GMRES.
 
 ---
 
 ** Description of the main code **
 
-Please have a look at file main.cpp, which is an example of how to use the method. In this example, N points are randomly distributed in the unit cube. The most important aspects of this file are summarized below:
+Please have a look at file main.cpp, which is an example of how to use the method. In this example, $N$ points are randomly distributed in the unit cube. The most important aspects of this file are summarized below:
 
 * Lines 14-16: input parameters (see below).
 
@@ -28,10 +28,10 @@ Please have a look at file main.cpp, which is an example of how to use the metho
 
 We assume to use g++, but the Intel's C++ compiler also can work.
 
-* Specify the directory of the Eigen by EIGEN_INCLUDE.
-* Eigen works better with MKL. To do so, add EIGEN_USE_MKL_ALL to FLAGS and specify the path to the library and include files.
-* Use the OpenMP library by -fopenmp.
-* To parallelize the code, add both PARA_CHECK_RANK and IFMM_PARALLELIZE to FLAGS.
+* Specify the directory of the Eigen by `EIGEN_INCLUDE`.
+* Eigen works better with MKL. To do so, add `EIGEN_USE_MKL_ALL` to `FLAGS` and specify the path to the library and include files.
+* Use the OpenMP library by `-fopenmp`.
+* To parallelize the code, add both `PARA_CHECK_RANK` and `IFMM_PARALLELIZE` to `FLAGS`.
 
 ---
 
