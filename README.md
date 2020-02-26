@@ -57,16 +57,16 @@ As you will notice, some parameters have to be specified for the method:
 
 * Toru Takahashi, Pieter Coulier, Eric Darve, "Application of the inverse fast multipole method as a preconditioner in a 3D Helmholtz boundary element method", Journal of Computational Physics, 34, pp.406-428. https://www.sciencedirect.com/science/article/pii/S0021999117302875
 
-* Pieter Coulier, Hadi Pouransari, Eric Darve, "The Inverse Fast Multipole Method: Using a Fast Approximate Direct Solver as a Preconditioner for Dense Linear Systems", SIAM J. Sci. Comput., 39(3), A761–A796.
+* Pieter Coulier, Hadi Pouransari, Eric Darve, "The Inverse Fast Multipole Method: Using a Fast Approximate Direct Solver as a Preconditioner for Dense Linear Systems", SIAM J. Sci. Comput., 39(3), A761–A796. https://epubs.siam.org/doi/abs/10.1137/15M1034477
 
 * S. Ambikasaran, E. Darve, "The inverse fast multipole method", arXiv:1407.1572
 , 2014. http://arxiv.org/abs/1407.1572
 
 ---
 
-** Authors **
+** Contributors **
 
-Toru Takahashi
-Chao Chen
-Pieter Coulier
-Eric Darve
+* Toru Takahashi, Nagoya University
+* Chao Chen, University of Texas at Autstin
+* Pieter Coulier, formally Stanford University
+* Eric Darve, Stanford University
