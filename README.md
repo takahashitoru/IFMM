@@ -20,7 +20,7 @@ Please have a look at file main.cpp, which is an example of how to use the metho
 
 * Lines 40-55: For validation purposes, we choose a vector 'x_exact' and calculate the corresponding right-hand side (b=Ax_exact). (We don't need to do this in an actual problem.)
 
-* Lines 71-102: Solve Ax=b with the inverse multipole method (and compare this 'x' with 'x_exact'). As you can see on line 77, I create an object 'ifmm' of the class 'IFMM_Matrix'. What follows are initialization, setRHS, elimination, and substitution. Most of the time is spent in the elimination phase (certainly for large systems).
+* Lines 71-102: Solve Ax=b with the inverse multipole method (and compare this 'x' with 'x_exact'). As you can see on line 77, we create an object 'ifmm' of the class 'IFMM_Matrix'. What follows are initialization, setRHS, elimination, and substitution. Most of the time is spent in the elimination phase (certainly for large systems).
 
 ---
 
@@ -41,25 +41,29 @@ Once the elimination has been performed, the factorization can easily (and fast)
 
 As you will notice, some parameters have to be specified for the method:
 
-* n: the number of Chebyshev points that are used in each direction for constructing low-rank approximations. The larger n, the more accurate the solver is, but at a higher computational cost. I would suggest using n=1, 2, or 3 for preconditioning purposes.
-* l: the number of levels in the octree (must be larger than two). This will depend on the total number of points N.
-* epsilon_rel_fillin: relative accuracy for compressing the fill-ins that arise during the elimination. You can play with this value - I suggest something between 10^{-1} and 10^{-3}.
-* epsilon_rel_basis: relative accuracy for updating the basis of the FMM operators. 10^{-3} seems to be a good choice.
-* LR_mode: choose LR_mode=3 for best performance (this uses a randomized singular value decomposition for obtaining low rank approximations).
+* **n**: the number of Chebyshev points that are used in each direction for constructing low-rank approximations. The larger n, the more accurate the solver is, but at a higher computational cost. We would suggest using n=1, 2, or 3 for preconditioning purposes.
+
+* **l**: the number of levels in the octree (must be larger than two). This will depend on the total number of points N.
+
+* **epsilon_rel_fillin**: relative accuracy for compressing the fill-ins that arise during the elimination. You can play with this value --- We suggest something between $10^{-1}$ and $10^{-3}$.
+
+* **epsilon_rel_basis**: relative accuracy for updating the basis of the FMM operators. 10^{-3} seems to be a good choice.
+
+* **LR_mode**: choose LR_mode=3 for best performance (this uses a randomized singular value decomposition for obtaining low rank approximations).
     Delay_update: currently not supported yet, so put false.
 
 ---
 
 ** References **
 
-* Toru Takahashi, Chao Chen, Eric Darve, "Parallelization of the inverse fast multipole method with an application to boundary element method", Computer Physics Communications, 247, 2019. https://www.sciencedirect.com/science/article/pii/S0010465519303194
+* Toru Takahashi, Chao Chen, Eric Darve, "Parallelization of the inverse fast multipole method with an application to boundary element method", Computer Physics Communications, 247, 2019. [Takahashi2019](https://www.sciencedirect.com/science/article/pii/S0010465519303194 "")
 
-* Toru Takahashi, Pieter Coulier, Eric Darve, "Application of the inverse fast multipole method as a preconditioner in a 3D Helmholtz boundary element method", Journal of Computational Physics, 34, pp.406-428. https://www.sciencedirect.com/science/article/pii/S0021999117302875
+* Toru Takahashi, Pieter Coulier, Eric Darve, "Application of the inverse fast multipole method as a preconditioner in a 3D Helmholtz boundary element method", Journal of Computational Physics, 34, pp.406-428, 2017. [Takahashi2017](https://www.sciencedirect.com/science/article/pii/S0021999117302875 "")
 
-* Pieter Coulier, Hadi Pouransari, Eric Darve, "The Inverse Fast Multipole Method: Using a Fast Approximate Direct Solver as a Preconditioner for Dense Linear Systems", SIAM J. Sci. Comput., 39(3), A761–A796. https://epubs.siam.org/doi/abs/10.1137/15M1034477
+* Pieter Coulier, Hadi Pouransari, Eric Darve, "The Inverse Fast Multipole Method: Using a Fast Approximate Direct Solver as a Preconditioner for Dense Linear Systems", SIAM J. Sci. Comput., 39(3), A761–A796. [Coulier2017](https://epubs.siam.org/doi/abs/10.1137/15M1034477 "")
 
 * S. Ambikasaran, E. Darve, "The inverse fast multipole method", arXiv:1407.1572
-, 2014. http://arxiv.org/abs/1407.1572
+, 2014. [Ambikasaran2014](http://arxiv.org/abs/1407.1572 "")
 
 ---
 
