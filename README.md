@@ -56,14 +56,13 @@ As you will notice, some parameters have to be specified for the method:
 
 ** References **
 
-* Toru Takahashi, Chao Chen, Eric Darve, "Parallelization of the inverse fast multipole method with an application to boundary element method", Computer Physics Communications, 247, 2019. [Takahashi2019](https://www.sciencedirect.com/science/article/pii/S0010465519303194 "")
+* [Toru Takahashi, Chao Chen, Eric Darve, "Parallelization of the inverse fast multipole method with an application to boundary element method", Computer Physics Communications, 247, 2019.](https://www.sciencedirect.com/science/article/pii/S0010465519303194 "Takahashi2019")
 
-* Toru Takahashi, Pieter Coulier, Eric Darve, "Application of the inverse fast multipole method as a preconditioner in a 3D Helmholtz boundary element method", Journal of Computational Physics, 34, pp.406-428, 2017. [Takahashi2017](https://www.sciencedirect.com/science/article/pii/S0021999117302875 "")
+* [Toru Takahashi, Pieter Coulier, Eric Darve, "Application of the inverse fast multipole method as a preconditioner in a 3D Helmholtz boundary element method", Journal of Computational Physics, 34, pp.406-428, 2017.](https://www.sciencedirect.com/science/article/pii/S0021999117302875 "Takahashi2017")
 
-* Pieter Coulier, Hadi Pouransari, Eric Darve, "The Inverse Fast Multipole Method: Using a Fast Approximate Direct Solver as a Preconditioner for Dense Linear Systems", SIAM J. Sci. Comput., 39(3), A761–A796. [Coulier2017](https://epubs.siam.org/doi/abs/10.1137/15M1034477 "")
+* [Pieter Coulier, Hadi Pouransari, Eric Darve, "The Inverse Fast Multipole Method: Using a Fast Approximate Direct Solver as a Preconditioner for Dense Linear Systems", SIAM J. Sci. Comput., 39(3), A761–A796.](https://epubs.siam.org/doi/abs/10.1137/15M1034477 "Coulier2017")
 
-* S. Ambikasaran, E. Darve, "The inverse fast multipole method", arXiv:1407.1572
-, 2014. [Ambikasaran2014](http://arxiv.org/abs/1407.1572 "")
+* [S. Ambikasaran, E. Darve, "The inverse fast multipole method", arXiv:1407.1572, 2014.](http://arxiv.org/abs/1407.1572 "Ambikasaran2014")
 
 ---
 
