@@ -10,17 +10,17 @@ The code provides an (approximate) direct solver for the system of equations Ax=
 
 Please have a look at file main.cpp, which is an example of how to use the method. In this example, N points are randomly distributed in the unit cube. The most important aspects of this file are summarized below:
 
-*Lines 14-16: input parameters (see below)
+* Lines 14-16: input parameters (see below).
 
-*Line 25: distribution of the points in a 3D cube
+* Line 25: distribution of the points in a 3D cube.
 
-*Line 28: defines the kernel K(r)
+* Line 28: defines the kernel K(r).
 
-*Lines 30-34: iFMM parameters (see below)
+* Lines 30-34: iFMM parameters (see below).
 
-*Lines 40-55: For validation purposes, I choose a vector 'x_exact' and calculate the corresponding right-hand side (b=A*x_exact). You obviously don't need to do this in an actual problem.
+* Lines 40-55: For validation purposes, we choose a vector 'x_exact' and calculate the corresponding right-hand side (b=Ax_exact). (We don't need to do this in an actual problem.)
 
-*Lines 71-102: Solve Ax=b with the inverse multipole method (and compare this 'x' with 'x_exact'). As you can see on line 77, I create an object 'ifmm' of the class 'IFMM_Matrix'. What follows are initialization, setRHS, elimination, and substitution. Most of the time is spent in the elimination phase (certainly for large systems).
+* Lines 71-102: Solve Ax=b with the inverse multipole method (and compare this 'x' with 'x_exact'). As you can see on line 77, I create an object 'ifmm' of the class 'IFMM_Matrix'. What follows are initialization, setRHS, elimination, and substitution. Most of the time is spent in the elimination phase (certainly for large systems).
 
 ---
 
