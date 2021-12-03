@@ -1,12 +1,12 @@
-## A parallelized inverse fast multipole method (IFMM)
+# A parallelized inverse fast multipole method (IFMM)
 
-# Overview
+## Overview
 
 The code provides an (approximate) direct solver for the system of equations $Ax=b$, where the matrix entries $a_{ij}$ are based on a kernel $K(r)$, i.e., $a_{ij} = K(||x_i - x_j||)$. The algorithm has a linear scaling $O(N)$ and is based on two key ideas: (1) the original dense matrix A is transformed into an extended sparse matrix, and (2) fill-ins arising during the elimination phase are compressed as low-rank matrices if they correspond to well-separated interactions (hence ensuring that the sparsity pattern of the extended matrix is preserved). The method can be used as a highly accurate direct solver (machine accuracy can be achieved if needed), but it is more efficient to use it as a low accuracy preconditioner in an iterative solver such as GMRES.
 
 ---
 
-# Description of the main code
+## Description of the main code
 
 Please have a look at file main.cpp, which is an example of how to use the method. In this example, N points are randomly distributed in the unit cube. The most important aspects of this file are summarized below:
 
@@ -24,7 +24,7 @@ Please have a look at file main.cpp, which is an example of how to use the metho
 
 ---
 
-# Edit Makefile
+## Edit Makefile
 
 We assume to use g++, but the Intel's C++ compiler also can work.
 
@@ -35,7 +35,7 @@ We assume to use g++, but the Intel's C++ compiler also can work.
 
 ---
 
-# Parameters for IFMM
+## Parameters for IFMM
 
 Once the elimination has been performed, the factorization can easily (and fast) be re-used to solve to system for another right-hand side. This is illustrated on lines 105-123 (for 10 random RHS vectors): you need to reset the RHS-vector, re-use the factorization, and perform the substitution once more. Re-using the factorization is particularly useful if the iFMM is applied as a preconditioner in an iterative solver (which is not shown in this example).
 
@@ -54,7 +54,7 @@ As you will notice, some parameters have to be specified for the method:
 
 ---
 
-# References
+## References
 
 * [Toru Takahashi, Chao Chen, Eric Darve, "Parallelization of the inverse fast multipole method with an application to boundary element method", Computer Physics Communications, 247, 2019.](https://www.sciencedirect.com/science/article/pii/S0010465519303194 "Takahashi2019")
 
@@ -66,7 +66,7 @@ As you will notice, some parameters have to be specified for the method:
 
 ---
 
-# Contributors
+## Contributors
 
 * Toru Takahashi, Nagoya University
 * Chao Chen, University of Texas at Autstin
